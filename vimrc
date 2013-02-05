@@ -90,12 +90,15 @@ map <silent> <leader>tl :TlistToggle<cr>
 let g:bufExplorerShowTabBuffer=1
 let g:bufExplorerDefaultHelp=0
 
-"配置快捷键
-"cpp/h切换
+"配置MiniBufExplorer
+let g:miniBufExplMapWindowNavVim = 1
+
+"配置a.vim
 map <silent> <leader>aa :A<cr>
 map <silent> <leader>av :AV<cr>
 map <silent> <leader>as :AS<cr>
 
+"配置快捷键
 map <silent> <leader>wh <c-w>h
 map <silent> <leader>wl <c-w>l
 map <silent> <leader>ww <c-w><c-w>

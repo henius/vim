@@ -1,4 +1,4 @@
 git clone https://github.com/tpope/vim-pathogen.git
 git clone https://github.com/scrooloose/nerdtree.git
 git clone https://github.com/scrooloose/nerdcommenter.git
-
+git clone https://https://github.com/fholgado/minibufexpl.vim.git
