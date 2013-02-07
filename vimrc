@@ -38,6 +38,9 @@ set incsearch
 set termencoding=utf-8
 set encoding=utf-8
 
+"启用鼠标
+set mouse=a
+
 "设置<leader>
 "when use just in normal mode type ,ee   
 let mapleader = "," 
@@ -97,6 +100,18 @@ let g:miniBufExplMapWindowNavVim = 1
 map <silent> <leader>aa :A<cr>
 map <silent> <leader>av :AV<cr>
 map <silent> <leader>as :AS<cr>
+
+"配置autofmt
+let s:unicode = unicode#import()
+let s:orig_prop_line_break = s:unicode.prop_line_break
+function! s:unicode.prop_line_break(char)
+    if a:char == "\u201c" || a:char == "\u2018"
+        return "OP"   " Open Punctuation
+    elseif a:char == "\u201d" || a:char == "\u2019"
+        return "CL"   " Close Punctuation
+    endif
+    return call(s:orig_prop_line_break, [a:char], self)
+endfunction
 
 "配置快捷键
 map <silent> <leader>wh <c-w>h
