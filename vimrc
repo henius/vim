@@ -67,7 +67,7 @@ map <silent> <leader>nt :NERDTreeToggle<cr>
 map <silent> <leader>nf :NERDTreeFind<cr>
 
 "配置taglist
-"let Tlist_Ctags_Cmd='/bin/ctags'
+let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
 "let Tlist_Ctags_Cmd='ctags.exe'
 let Tlist_Show_One_File=1
 let Tlist_OnlyWindow=1
